@@ -6,12 +6,40 @@ using System.Threading.Tasks;
 
 namespace Teszt2
 {
-    class Program
+    class Kor
     {
-        static void Main(string[] args)
+        //Rendszerváltozó
+        private double sugar,
+            kerulet,
+            terulet;
+
+        //Konstruktor
+        public Kor(double r) {this.sugar = r;}
+
+        public void setKerulet(double r)
         {
-            Console.WriteLine("Én vagyok a teszt 2 program");
-            Console.ReadKey();
+            this.kerulet = 2 * r * Math.PI;
         }
+
+        public void setTerulet()
+        {
+            this.terulet = Math.Pow(this.sugar, 2) * Math.PI;
+        }
+
+        public double getKerulet()
+        {
+            return this.kerulet;
+        }
+
+        public double getTerulet()
+        {
+            return this.terulet;
+        }
+
+        public double getSugar()
+        {
+            return this.sugar;
+        }
+
     }
 }
